@@ -1,23 +1,23 @@
 import { Notice, Plugin, MarkdownView } from 'obsidian';
 
 export default class DoNextTaskPlugin extends Plugin {
-	async onload() {
+	onload() {
 		// Add ribbon icon for marking next task
-		this.addRibbonIcon('check-circle', 'Mark Next Task', async () => {
-			await this.markNextTask();
+		this.addRibbonIcon('check-circle', 'Mark next task', () => {
+			this.markNextTask();
 		});
 
 		// Add command for marking next task
 		this.addCommand({
 			id: 'mark-next-task',
-			name: 'Mark Next Task',
-			callback: async () => {
-				await this.markNextTask();
+			name: 'Mark next task',
+			callback: () => {
+				this.markNextTask();
 			}
 		});
 	}
 
-	async markNextTask() {
+	markNextTask() {
 		const activeView = this.app.workspace.getActiveViewOfType(MarkdownView);
 
 		if (!activeView) {
