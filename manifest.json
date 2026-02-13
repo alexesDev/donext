@@ -3,7 +3,7 @@
 	"name": "Do Next Task",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "Mark the first uncompleted task in the current note with timestamp",
+	"description": "Mark the first uncompleted task in the current note with timestamp. Your monkey should just do a next task.",
 	"author": "Alexey",
 	"authorUrl": "",
 	"isDesktopOnly": false
